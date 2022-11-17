@@ -14,4 +14,8 @@ int Multiplicity (int num)
     return num;
 }
 int result = Multiplicity(number);
-Console.WriteLine(result);
+if (number < 100)
+Console.WriteLine("Нет третьего числа");
+else if  (number > 1000)
+Console.WriteLine("Невозможно расчитать");
+else Console.WriteLine(result);
