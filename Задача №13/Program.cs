@@ -11,10 +11,9 @@ int MaxDigit(int num)
     while (num > 1000)
     {
         num = num / 10;
-    }
-    return num % 10;
+    } return num % 10;
 }
 int result = MaxDigit(number);
 if (number < 100)
-Console.WriteLine("Третьего числа нет");
+Console.WriteLine("Нет третьего числа или оно отрицательное");
 else Console.WriteLine(result);
