@@ -7,7 +7,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 for (int count = 1; count<= number; count++)
 if (count <= number)
 {
-    if (count % 2 ==00)
+    if (count % 2 ==0)
     {
         Console.Write(count+" ");
     }
