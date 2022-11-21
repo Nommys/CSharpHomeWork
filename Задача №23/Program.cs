@@ -5,3 +5,18 @@
 // 3 | 27
 // 4 | 64
 // 5 | 125
+Console.Clear();
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number<0)
+{
+    Console.Write("Нельзя вводить отрицательное число");
+}
+void Cube(int num)
+{
+    for (int i = 1; i <= num; i++)
+    {
+        Console.WriteLine($"{i} | {i*i*i} ");
+    }
+}
+Cube(number);
