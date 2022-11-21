@@ -15,5 +15,5 @@ int MaxDigit(int num)
 }
 int result = MaxDigit(number);
 if (number < 100)
-Console.WriteLine("Нет третьего числа или оно отрицательное");
+Console.WriteLine("Нет третьей цифры или оно отрицательное");
 else Console.WriteLine(result);
