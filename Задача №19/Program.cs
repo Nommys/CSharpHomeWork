@@ -27,6 +27,6 @@ void Palidrome (int num)
             }
             else Console.WriteLine("Нет");
     }
-    else Console.WriteLine("Нет");
+    
 }
 Palidrome(number);
