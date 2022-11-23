@@ -6,23 +6,18 @@ int[] array = new int[8];
 
 void FindArray(int[] numberarray)
 {
-    int lenght = numberarray.Length;
-    int index = 0;
-    while(index < lenght)
+    Random rng = new Random();
+    for (int index = 0; index < numberarray.Length; index++)
     {
-        numberarray[index] = new Random().Next (1, 100);
-        index++;
+        numberarray[index] = rng.Next (1, 100);
     }
 }
 
 void PrintArray (int[] numbers)
 {
-    int count = numbers.Length;
-    int index = 0;
-    while (index < count)
+    for (int index = 0 ; index < numbers.Length; index++)
     {
         Console.Write($"{numbers[index]} ");
-        index++;
     }
 }
 
