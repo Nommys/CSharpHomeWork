@@ -11,6 +11,12 @@ if (number < 10000)
 {
     Console.WriteLine("Невозможно проверить, нехватает цифры");
 }
+if (number > 100000)
+{
+    Console.WriteLine("Невозможно проверить, число должно быть пятизначным");
+}
+else
+{
 void Palidrome (int num)
 {
     if (num > 10000)
@@ -30,3 +36,4 @@ void Palidrome (int num)
     
 }
 Palidrome(number);
+}
