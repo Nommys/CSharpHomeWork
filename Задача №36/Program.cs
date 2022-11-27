@@ -6,9 +6,9 @@
 Console.Clear();
 Console.WriteLine("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Задайте диопозон чисел массива от: ");
+Console.WriteLine("Задайте диапазон чисел массива от: ");
 int min = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Задайте диопозон чисел массива до: ");
+Console.WriteLine("Задайте диапазон чисел массива до: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] CreatNewArray (int size, int min,int max)
