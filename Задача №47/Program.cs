@@ -13,7 +13,7 @@ void CreatNewArray(double[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i,j] = Convert.ToDouble(new Random().Next(-100,100))/10;
-            Console.Write($"{matrix[i,j]}  ");
+            Console.Write($"|{matrix[i,j], 4}|");
         }
         Console.WriteLine();
     }
