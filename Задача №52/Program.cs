@@ -33,7 +33,7 @@ void SumMatrix (int[,] matrix)
         {
             sum += matrix[i, j];
         } 
-        double avg = sum / 4;
+        double avg = sum / matrix.GetLength(1);
         Console.Write($"{avg} ");
     }
 }
