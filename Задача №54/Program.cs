@@ -13,18 +13,21 @@ Console.WriteLine("Введите количество строк");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов");
 int columns = Convert.ToInt32(Console.ReadLine());
-int[,] matrix = new int[rows, columns];
 
-void FillArrayRandomNumbers(int[,] matrix)
+
+int[,] CreateMatrixRndInt (int rows, int columns, int min, int max)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int[,] matr = new int[rows, columns];
+    Random rnd = new Random();
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(0, 10);
+            matr[i,j] = rnd.Next(min, max +1);
         }
-    }
+    } return matr;
 }
+int[,] matrix = CreateMatrixRndInt (rows, columns, 1, 10);
 
 void CreatNewArray(int[,] matrix)
 {
@@ -37,21 +40,24 @@ void CreatNewArray(int[,] matrix)
         Console.WriteLine();
     }
 }
-FillArrayRandomNumbers(matrix);
+
 Console.WriteLine("Массив до изменения:");
 CreatNewArray(matrix);
-for (int i = 0; i < matrix.GetLength(0); i++)
+SortArray(matrix);
+void SortArray (int[,] matrix)
 {
-    for (int j = 0; j < matrix.GetLength(1) - 1; j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int k = 0; k < matrix.GetLength(1) - 1 ; k++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (matrix[i, k] < matrix[i, k + 1]) 
+            for (int k = 0; k < matrix.GetLength(1)-1; k++)
             {
-                int temp = 0;
-                temp = matrix[i, k];
-                matrix[i, k] = matrix[i, k + 1];
-                matrix[i, k + 1] = temp;
+                if (matrix[i, k] < matrix[i, k +1]) 
+                {
+                    int temp = matrix[i, k+1];
+                    matrix[i, k+1] = matrix[i, k];
+                    matrix[i, k] = temp;
+                }
             }
         }
     }
